@@ -1,18 +1,36 @@
 p
 {
-	background-color: blue;
-	color: white;
+	background-color: lightblue;
+	color: yellow;
 	font-family: arial;
 	font-size: 22pt;
 }
 
 body
 {
-	background-color: red;
+	background-image: url(u=1502755476,2483048754&fm=27&gp=0.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 p.halloween
 {
 	color: orange;
 	background-color: black;
+}
+
+a.highlight
+{
+	color: orange;
+	background-color: lightblue;
+	font-family: arial;
+	font-size: 22pt;
+}
+a:hover
+{
+	color: yellow;
+	background-color: blue;
+	font-family: arial;
+	font-size: 22pt;
 }
