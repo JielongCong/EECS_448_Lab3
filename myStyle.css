@@ -10,3 +10,9 @@ body
 {
 	background-color: red;
 }
+
+p.halloween
+{
+	color: orange;
+	background-color: black;
+}
