@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+
+<body>
+
+<h1>CSS Manipulation</h1>
+
+<br>
+<div style="font-size: 22pt" id="dummy">dummy text</div><br><br>
+    <form>
+        Border (all in rgb method): <br>
+        red value: <br>
+        <input type="number" name="BorderRed" id="BRed" required><br>
+        green value: <br>
+        <input type="number" name="BorderGreen" id="BGreen" required><br>
+        blue value: <br>
+        <input type="number" name="BorderBlue" id="BBlue" required><br>
+        width: <br>
+        <input type="text" name="BorderWidth" id="BWidth" required><br>
+        <br>
+        BackGround (all in rgb method): <br>
+        red value: <br>
+        <input type="number" name="BackRed" id="BGRed" required><br>
+        green value: <br>
+        <input type="number" name="BackGreen" id="BGGreen" required><br>
+        blue value: <br>
+        <input type="number" name="BackBlue" id="BGBlue" required><br>
+     </form>
+
+<button type ="button" onclick ="DOMEexercise()">Set border and background color.</button>
+
+
+    <script>
+        function DOMEexercise()
+        {
+            var BoRed = document.getElementById("BRed").value;
+            var BoGreen = document.getElementById("BGreen").value;
+            var BoBlue = document.getElementById("BBlue").value;
+            var BoWid = document.getElementById("BWidth").value;
+
+            var BGDRed = document.getElementById("BGRed").value;
+            var BGDGreen = document.getElementById("BGGreen").value;
+            var BGDBlue = document.getElementById("BGBlue").value;
+
+            document.getElementById("dummy").style.border = (BoWid + " dotted rgb(" + BoRed + ", " + BoGreen + ", " + BoBlue + ")");
+            document.getElementById("dummy").style.backgroundColor = ("rgb(" + BGDRed + ", " + BGDGreen + ", " + BGDBlue + ")");
+
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
