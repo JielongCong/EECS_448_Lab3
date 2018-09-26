@@ -1,0 +1,19 @@
+p.indexRender
+{
+	font-family: arial;
+	font-size: 22pt;
+}
+p.indexRenderAuther
+{
+	font-family: arial;
+	font-size: 18pt;
+}
+
+body
+{
+	background-image: url(187011.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+    <link href="myStyle2.css"
+        rel="stylesheet"
+        type="text/css" />
+</head>
+
+<!--Use a w3 Template -->
+<link rel ="stylesheet" href ="http://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+<p class="indexRender">EECS 448 Lab 3 exerices</p><br>
+<p class="indexRenderAuther">Author: Jielong Cong</p><br>
+
+<div class="w3-container w3-cell">
+<a href="passwordValidator.html" target ="_blank">Exercise 1, password validator</a><br>
+<a href="slidesShow.html" target ="_blank">Exercise 2, slides show</a><br>
+<a href="personalProfile.html" target ="_blank">Exercise 3, personal profile</a><br>
+<a href="CSSManipulation.html" target ="_blank">Exercise 4, CSS manipulation</a><br>
+</div>
+
+<!--use div tag to store all slides show-->
+<!--using w3 template  w3-content will make the content at the center of the page-->
+<div class ="w3-content w3-display-right">
+ 
+<div class="w3-display-container slides"> 
+<a href="passwordValidator.html" target ="_blank">      
+<img src = "E1.jpg" width="100%" height="70%">
+</a>
+<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Exercise 1, click for detail
+</div> 
+</div>
+
+<div class="w3-display-container slides"> 
+<a href="slidesShow.html" target ="_blank">
+<img src = "E2.jpg" width="100%" height="70%">
+</a>
+<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Exercise 2, click for detail
+</div>
+</div>
+    
+<div class="w3-display-container slides"> 
+<a href="personalProfile.html" target ="_blank">             
+<img src = "E3.jpg" width="100%" height="70%">
+</a>
+<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Exercise 3, click for detail
+</div>  
+</div>
+
+<div class="w3-display-container slides">
+<a href="CSSManipulation.html" target ="_blank"> 
+<img src = "E4.jpg" width="100%" height="70%"> 
+</a>
+<div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Exercise 4, click for detail
+</div> 
+</div>
+
+<!-- use w3 template: a black retangular button-->
+<button class="w3-button w3-black w3-display-left" type ="button" onclick ="movePic(-1)">&#10094previous</button>
+<button class="w3-button w3-black w3-display-right" type ="button" onclick ="movePic(1)">Next&#10095</button>
+
+</div>
+
+<!--The function will make the slides move -->
+<script>
+
+    
+    var tempIndex = 0;
+    showDivs(tempIndex);
+
+    
+
+    function movePic(n) {
+        showDivs(tempIndex += n);
+    }
+
+    function showDivs(index) {
+        //search the slides using class name.
+        var allSlides = document.getElementsByClassName("slides");
+
+        //make the slides show as a loop.
+        if (index > allSlides.length) {
+            tempIndex = 1;
+        }
+        else if (index < 1) {
+            tempIndex = allSlides.length;
+        }
+
+        for (var i = 0; i < allSlides.length; i++) {
+            //need to make the last pic to disppear on the page.
+            allSlides[i].style.display = "none";
+        }
+        //render the pic as a block type.
+        allSlides[tempIndex - 1].style.display = "block";
+
+
+    }
+    //All code below is refernce from https://www.w3schools.com/w3css/w3css_slideshow.asp
+    carousel();
+
+    function carousel() {
+        var x = document.getElementsByClassName("slides");
+        for (var i = 0; i < x.length; i++)
+        {
+            x[i].style.display = "none";
+        }
+        tempIndex++;
+        if (tempIndex > x.length)
+        {
+            tempIndex = 1
+        }
+        x[tempIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+
+</script>
+
+</body>
+</html>
